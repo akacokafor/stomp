@@ -74,6 +74,9 @@ class _StompClient implements StompClient {
   final List<int> heartbeat = new List(2);
   bool get isDisconnected => _disconnected;
 
+  /**
+  * returns Future<StompClient> as Future<dynamic>
+  */
   static Future<StompClient> connect(StompConnector connector,
       String host, String login, String passcode, List<int> heartbeat,
       void onConnect(StompClient client, Map<String, String> headers),
