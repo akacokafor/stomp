@@ -77,7 +77,7 @@ class _StompClient implements StompClient {
   /**
   * returns Future<StompClient> as Future<dynamic>
   */
-  static Future<StompClient> connect(StompConnector connector,
+  static Future<dynamic> connect(StompConnector connector,
       String host, String login, String passcode, List<int> heartbeat,
       void onConnect(StompClient client, Map<String, String> headers),
       void onDisconnect(StompClient client),
